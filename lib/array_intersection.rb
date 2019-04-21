@@ -12,11 +12,7 @@ def intersection(array1, array2)
     hash[num] += 1
   end
   array2.each do |num|
-    hash[num] += 1
-  end
-
-  hash.each do |num, count|
-    if count > 1
+    if hash.has_key?(num)
       intersection << num
     end
   end
